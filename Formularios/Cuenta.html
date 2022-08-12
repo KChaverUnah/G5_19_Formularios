@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../JS/Cuenta.js"></script>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../Home.html">
+                <img src="https://www.unah.edu.hn/themes/portalunah/assets/images/logo-unah.png" alt="" width="100" height="50"> G5_19
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Informacion.html">INFOMACIÓN</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            FORMULARIOS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./cliente.html">Cliente</a></li>
+                            <li><a class="dropdown-item" href="./Cuenta.html">Cuenta</a></li>
+                            <li><a class="dropdown-item" href="./Bancos.html">Servicio Bancario</a></li>
+                            <li><a class="dropdown-item" href="./transaccion.html">Transaccion</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-warning" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header><br>
+<body>
+    <div class="bg-secondary p-2 text-dark bg-opacity-10">
+        <div class="container"> 
+            <div class="consulta mt-4">
+                <div class="row">
+                    <div class="col-6">
+                       <h3>
+                          Listado de Cuentas
+                       </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="table table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Numero Cuenta</th>
+                                <th>Nombre Cuenta</th>
+                                <th>Numero Cliente</th>
+                                <th>Fecha Apertura</th>
+                                <th>Saldo Actual</th>
+                                <th>Saldo Retenido</th>
+                                <th>Tipo Moneda</th>
+                            </tr>
+                        </thead>
+                        <tbody id="DataCuentas">
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="Formulario">
+                <div class="row">
+                    <div class="col-12">
+                       <h3>
+                          Agregar Cuenta
+                       </h3>
+                    </div>
+                    <div class="col-12">
+                        <form class="cuenta">
+                            <label for="">Numero Cuenta</label>
+                            <input type="text" id="Numero_Cuenta" class="form-control" placeholder="Ingrese el Número de Cuenta">
+                            <label for="">Nombre Cuenta</label>
+                            <input type="text" id="Nombre_Cuenta" class="form-control" placeholder="Ingrese el Nombre de la Cuenta">
+                            <label for="">Numero Cliente</label>
+                            <input type="text" id="Numero_Cliente" class="form-control" placeholder="Ingrese el Numero del Cliente">
+                            <label for="">Fecha Apertura</label>
+                            <input type="text" id="Fecha_Apertura" class="form-control" placeholder="Ingrese la Fecha de Apertura">
+                            <label for="">Saldo Actual</label>
+                            <input type="text" id="Saldo_Actual" class="form-control" placeholder="Ingrese el Saldo Actual">
+                            <label for="">Saldo Retenido</label>
+                            <input type="text" id="Saldo_Retenido" class="form-control" placeholder="Ingrese el Saldo Retenido">
+                            <label for="">Tipo Moneda</label>
+                            <input type="text" id="Tipo_Moneda" class="form-control" placeholder="Ingrese el Tipo de Moneda">
+                            <hr>
+                            <div id="btnagregarcuenta">
+                                <input type="submit" id="btnagregar" onclick="AgregarCuenta()" value="Ingresar Cuenta" class="btn btn-success">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
